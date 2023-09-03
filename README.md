@@ -4,7 +4,10 @@ Basic JS & HTML website deployed on GitHub pages to build personal portfolio.  R
 ## Google App Script for contact form
 Open Google spreadsheet and enter contact form fields, then in navbar choose extensions and add google app script. Use the below code and run it before deploying it as a webapp. Recommended to add trigger.
 
-```const sheetName = 'Sheet1'
+```// Original code from https://github.com/jamiewilson/form-to-google-sheets
+// Updated for 2021 and ES6 standards
+
+const sheetName = 'Sheet1'
 const scriptProp = PropertiesService.getScriptProperties()
 
 function initialSetup () {
@@ -55,6 +58,9 @@ function doPost (e) {
   }
 
   finally {
+    lock.releaseLock()
+  }
+}
     lock.releaseLock()
   }
 }
