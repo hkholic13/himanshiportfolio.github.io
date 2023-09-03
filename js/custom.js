@@ -116,7 +116,7 @@ form.addEventListener('submit', e => {
   fetch(scriptURL, { method: 'POST', body: new FormData(form), mode: 'no-cors' })
     .then(response => {
       alert("Your message was sent successfully! I will be in touch as soon as I can.");
-      location.assign("https://himanshikhatri.github.io/");
+      location.assign("https://hkholic13.github.io/himanshiportfolio.github.io/");
     })
     .catch(error => console.error('Error!', error.message));
 });
